@@ -1,5 +1,5 @@
 # TO-DO: Complete the selection_sort() function below
-def selection_sort(items):
+def selection_sort(items: list):
     # loop through n-1 elements
     for i in range(0, len(items) - 1):
         cur_index = i
@@ -21,11 +21,18 @@ def selection_sort(items):
     return items 
 
 # TO-DO:  implement the Bubble Sort function below
-def bubble_sort(arr):
-    # Your code here
+def bubble_sort(items: list):
+    # for all the items
+    for i in range(0, len(items) - 1):
+        # for items left over to loop thru
+        # because decrement end of list by one each time
+        for j in range(0, len(items) - i -1):
+            if items[j] > items[j+1]:
+
+                items[j], items[j+1] = items[j+1], items[j]
 
 
-    return arr
+    return items
 
 
 # STRETCH: implement the Count Sort function below
